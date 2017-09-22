@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bootstrap Basics</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="/bootstrap"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <style type="text/css">
+            .btn-danger {
+                background: orange;  
+            }
+        </style>
+    </head>
+    <body>
+       
+       
+       
+        <div class="container">
+            <div class="jumbotron">
+                <h1>This is a Jumbotron</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, semper inermis salutandi ex ius, cu vitae dolorum menandri has. Melius pericula temporibus cu cum. Ne est quaerendum dissentiet, graeci evertitur nec ei, eu soleat vidisse convenire mei. Vim in possim perfecto splendide. In salutandi efficiantur vituperatoribus mel. Qui an dolores delectus, et mea tollit soleat nominati, et pri forensibus scriptorem interpretaris. Mea ex tota semper, mei ex assum persequeris interpretaris, sit ne soluta senserit.
+                </p>
+                <button class="btn btn-success btn-lg">
+                    Hi there!
+                </button>
+            </div>
+
+            <h1>Bootstrap Basics</h1>
+            <button class="btn btn-danger btn-sm">CLICK ME!</button>
+            <button class="btn btn-success btn-sm active">CLICK ME!</button>
+            <button class="btn btn-success btn-sm" disabled="disabled">CLICK ME!</button>
+            <a class="btn btn-info btn-lg" href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap docs</a>
+            
+<!-- form-group
+form-control -->
+
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Check me out
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <!-- inline form -->
+
+            <form class="form-inline">
+                <label class="sr-only" for="inlineFormInputName2">Name</label>
+                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="Jane Doe">
+              
+                <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                  <div class="input-group-addon">@</div>
+                  <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+                </div>
+              
+                <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Remember me
+                  </label>
+                </div>
+              
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+    </body>
+</html>
