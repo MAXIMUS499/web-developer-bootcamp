@@ -1,27 +1,24 @@
 //using a loop
-
 // Create secretNumber
 var secretNumber = 4;
-
-
-while(Number(number) !== secretNumber) {
+while(Number(yourGuessNumber) !== secretNumber) {
 
 	// Ask user for a guess
 
-	var number = prompt("Guess a number!");
+	var yourGuessNumber = prompt("Guess a number!");
 
-	// Check if it is right
-	
-	if(Number(number) === secretNumber) {
+	// conditionals
+
+	if(Number(yourGuessNumber) === secretNumber) {
 	alert("Wow! You've guessed the right number");
 	}
-	else if( number === "" || isNaN(number) ) {
+	else if( yourGuessNumber === "" || isNaN(yourGuessNumber) ) {
 		alert("that is not a number you've entered!");
 	}
-	else if(number < secretNumber) {
+	else if(Number(yourGuessNumber) < secretNumber) {
 		alert("Too low! Try again.");
 	}
-	else if(number > secretNumber) {
+	else if(Number(yourGuessNumber) > secretNumber) {
 		alert("Too high! Try again.");
 	}
 }
