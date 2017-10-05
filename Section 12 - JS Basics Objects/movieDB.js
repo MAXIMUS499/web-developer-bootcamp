@@ -1,8 +1,8 @@
 var movieArray = [
 	{
-	 title: "Robocop",
-	 rating: 4,
-	 hasWatched: true
+	  title: "Robocop",
+	  rating: 4,
+	  hasWatched: true
 	},
 
 	{
@@ -19,12 +19,54 @@ var movieArray = [
 	
 ];
 
-function movieList(arr) {
-	for(var i = 0; i < arr.length; i++)
-		if(arr[i].hasWatched === true)
-			console.log("You have watched " + "\""+arr[i].title+"\""  + " - " + arr[i].rating + " stars.");
+//JUST FOR LOOP
+
+// function movieList(arr) {
+// 	for(var i = 0; i < arr.length; i++)
+// 		if(arr[i].hasWatched === true)
+// 			console.log("You have watched " + "\""+arr[i].title+"\""  + " - " + arr[i].rating + " stars.");
+// 		else
+// 			console.log("You have not watched " + "\""+arr[i].title+"\"" + " - " + arr[i].rating + " stars.");
+// }
+
+// USING THE FOR EACH LOOP
+
+// function movieList(arr) {
+// 	arr.forEach(function(movie){
+// 		if(movie.hasWatched === true)
+// 			console.log("You have watched " + "\""+movie.title+"\""  + " - " + movie.rating + " stars.");
+// 		else
+// 			console.log("You have not watched " + "\""+movie.title+"\"" + " - " + movie.rating + " stars.");
+// 	})	
+// }
+// movieList(movieArray);
+
+//TEACHER'S SOLUTIONS	
+
+	// movieArray.forEach(function(movie){
+	// 	var result = "You have ";
+	// 	if(movie.hasWatched)
+	// 		result += "watched ";
+	// 	else
+	// 		result += "not seen ";
+
+	// 	result += "\"" + movie.title + "\" - ";
+	// 	result += movie.rating + " stars";
+	// 	console.log(result);	
+	// })	
+
+function buildString(movie) {
+		var result = "You have ";
+		if(movie.hasWatched)
+			result += "watched ";
 		else
-			console.log("You have not watched " + "\""+arr[i].title+"\"" + " - " + arr[i].rating + " stars.");
+			result += "not seen ";
+
+		result += "\"" + movie.title + "\" - ";
+		result += movie.rating + " stars";
+		return result;
 }
 
-movieList(movieArray);
+movieArray.forEach(function(movie){
+	console.log( buildString(movie) );
+});
