@@ -20,12 +20,16 @@ h1 {
 }
 
 
-span {
-	color: white;
+
+#stripe {
+	background-color: white;
+	height: 30px;
+	text-align: center;
+	color:black;
 }
 
 /*#message {
-	color: white;
+	color: black;
 	text-align: center;
 	margin: 0 auto;
 }*/
