@@ -20,6 +20,10 @@ Each Campground has:
 
 #4) Style the campground page
 * Add a better header/title
-	* use a jumbotron in bootstrap
-	* add a grid of small images
+* use a jumbotron in bootstrap
+* add a grid of small images
 * Make campgrounds display in a grid
+
+#5) Style the Navbar and Form
+* Add a navbar to all templates
+* Style the new campground form
