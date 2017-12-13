@@ -3,6 +3,7 @@ var bodyParser = require("body-parser"),
 	  mongoose   = require("mongoose"),
 	  express 	 = require("express"),
 	  app 			 = express();
+	  moment 		 = require('moment');
 
 //2) set up basic things //APP CONFIG
 mongoose.connect("mongodb://localhost/restful_blog_app");
@@ -45,6 +46,7 @@ app.get("/blogs", function(req, res){
 app.get("/blogs/new", function(req, res){
 	res.render("new");
 });
+
 // CREATE ROUTE
 app.post("/blogs", function(req, res){
 	//create blog
@@ -54,9 +56,18 @@ app.post("/blogs", function(req, res){
 		//then, redirect to the index
 		else
 			res.redirect("/blogs");
+	});	
+});
+
+// SHOW ROUTE
+app.get('/blogs/:id', function(req, res) {
+	Blog.findById(req.params.id, function(err, foundBlog){
+		if(err)
+			res.redirect("/blogs");
+		else {
+			res.render("show", {blog: foundBlog})
+		}
 	});
-	
-	
 });
 
 app.listen(3000, () => console.log("The app is listening on port 3000"));
