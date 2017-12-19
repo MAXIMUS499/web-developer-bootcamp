@@ -32,3 +32,20 @@ DESTROY /destroyBlog/:id
 * Add NEW Template
 * Add Create route
 * Add CREATE template
+
+#SHOWtime
+* Add Show route
+* Add Show template
+* Add links to show page
+* Style show template
+
+#Edit/Update
+* Add Edit Route
+* Add Edit Form
+* Add Update Route
+* Add Update Form
+* Add Method-Override
+
+#Destroy
+* Add Destroy Route
+* Add Edit and Destroy Links
